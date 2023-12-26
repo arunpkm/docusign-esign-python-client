@@ -6682,6 +6682,7 @@ class EnvelopesApi(object):
 
         all_params = ['account_id', 'document_id', 'envelope_id', 'certificate', 'documents_by_userid', 'encoding', 'encrypt', 'language', 'recipient_id', 'shared_user_id', 'show_changes', 'watermark']
         all_params.append('callback')
+        all_params.append('response_type')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -6757,7 +6758,7 @@ class EnvelopesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='file',
+                                        response_type=params.get('response_type'),
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
